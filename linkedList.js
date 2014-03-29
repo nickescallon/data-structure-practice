@@ -1,5 +1,4 @@
 //linked List
-
 var List = function() {
   this.head = null;
   this.tail = null;
@@ -106,3 +105,5 @@ var Node = function(v) {
   this.next = null;
   this.prev = null;
 };
+
+module.exports = List;
