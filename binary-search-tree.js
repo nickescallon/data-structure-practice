@@ -45,6 +45,7 @@ BsTree.prototype.bTraverse = function(cb) {
     if (q[0].right) {
       q.push(q.right);
     }
+    q.shift();
   }
 };
 
