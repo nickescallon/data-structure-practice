@@ -38,14 +38,14 @@ BsTree.prototype.bTraverse = function(cb) {
   q.push(this)
 
   while (q.length) {
-    cb(q[0]);
-    if (q[0].left) {
-      q.push(q.left);
+    var cur = q.shift();
+    cb(cur);
+    if (cur.left) {
+      q.push(cur.left);
     }
-    if (q[0].right) {
-      q.push(q.right);
+    if (cur.right) {
+      q.push(cur.right);
     }
-    q.shift();
   }
 };
 
