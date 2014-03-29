@@ -11,7 +11,7 @@ var makeStack = function() {
   }
 
   instance.pop = function() {
-    size--;
+    size = size > 0 ? --size : 0;
     return storage.popHead()
   }
 
@@ -20,5 +20,20 @@ var makeStack = function() {
   }
 
   return instance;
-}
+};
 
+//TESTS//
+// var a = makeStack();
+
+// a.add(1);
+// a.add(2);
+// a.add(3);
+// console.log("size: ", a.size());
+// console.log(a.pop());
+// console.log("size: ", a.size());
+// console.log(a.pop());
+// console.log("size: ", a.size());
+// console.log(a.pop());
+// console.log("size: ", a.size());
+// console.log(a.pop());
+// console.log("size: ", a.size());
