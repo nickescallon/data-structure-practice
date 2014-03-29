@@ -30,7 +30,7 @@ List.prototype.addToHead = function(v) {
 
 List.prototype.popHead = function() {
   if (this.head === null) {
-    return "No Head";
+    return null;
   }
 
   var val = this.head.value;
@@ -48,7 +48,7 @@ List.prototype.popHead = function() {
 
 List.prototype.popTail = function() {
   if (this.tail === null) {
-    return "No Tail";
+    return null;
   }
 
   var val = this.tail.value;
