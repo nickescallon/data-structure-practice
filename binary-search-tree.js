@@ -10,15 +10,15 @@ BsTree.prototype.insert = function(v) {
     if (this.right === null) {
       this.right = node;
     }else {
-      this.right.insert(node);
+      this.right.insert(node.value);
     }
   }
 
-  if (v < ths.value) {
+  if (v < this.value) {
     if (this.left === null) {
       this.left = node;
     }else {
-      this.left.insert(node);
+      this.left.insert(node.value);
     }
   }
 };
@@ -39,7 +39,7 @@ BsTree.prototype.bTraverse = function(cb) {
 
   while (q.length) {
     var cur = q.shift();
-    cb(cur);
+    cb(cur.value);
     if (cur.left) {
       q.push(cur.left);
     }
@@ -49,3 +49,20 @@ BsTree.prototype.bTraverse = function(cb) {
   }
 };
 
+//TESTS//
+
+// var root = new BsTree(10);
+
+// root.insert(5);
+// root.insert(15);
+// root.insert(2);
+// root.insert(6);
+// root.insert(11);
+// root.insert(16);
+
+// var log = function(val) {
+//   console.log(val);
+// }
+// root.dTraverse(log);
+// root.bTraverse(log);
+// console.log(root);
